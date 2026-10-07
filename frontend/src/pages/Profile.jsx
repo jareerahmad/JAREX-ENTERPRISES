@@ -1,5 +1,4 @@
 import {
-    ArrowLeft,
     CalendarDays,
     CheckCircle2,
     LogOut,

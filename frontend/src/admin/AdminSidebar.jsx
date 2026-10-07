@@ -1,7 +1,6 @@
 import {
     LayoutDashboard,
     FolderKanban,
-    // BriefcaseBusiness,
     MessageSquare,
     UserRound,
     LogOut,
@@ -23,11 +22,6 @@ const navigation = [
         path: "/admin/projects",
         icon: FolderKanban,
     },
-    // {
-    //     name: "Services",
-    //     path: "/admin/services",
-    //     icon: BriefcaseBusiness,
-    // },
     {
         name: "Messages",
         path: "/admin/messages",

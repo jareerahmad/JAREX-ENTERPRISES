@@ -5,43 +5,11 @@ import { useEffect, useState } from "react";
 
 import Reveal from "../components/Reveal";
 
-// const API_URL = "http://localhost:5000/api";
-
 import apiRequest from "../services/api";
 
 function Projects() {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //     const fetchProjects = async () => {
-    //         try {
-    //             const response = await fetch(`${API_URL}/projects`);
-
-    //             const data = await response.json();
-
-    //             if (!response.ok) {
-    //                 throw new Error(
-    //                     data.message || "Failed to fetch projects."
-    //                 );
-    //             }
-
-    //             // Only show published projects on the public website
-    //             const publishedProjects = (data.projects || []).filter(
-    //                 (project) => project.published !== false
-    //             );
-
-    //             setProjects(publishedProjects);
-    //         } catch (error) {
-    //             console.error("Fetch projects error:", error);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
-
-    //     fetchProjects();
-    // }, []);
-
 
     useEffect(() => {
         const fetchProjects = async () => {
