@@ -26,7 +26,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                "http://localhost:5000/api/messages",
+                `${import.meta.env.VITE_API_URL}/messages`,
                 {
                     method: "POST",
                     headers: {
@@ -162,7 +162,7 @@ function Contact() {
                                     </p>
 
                                     <p className="mt-1 text-sm text-[#B9C3BD] transition-colors duration-300 group-hover:text-[#19C37D]">
-                                        jarexenterprises@gmailh.com
+                                        jarexenterprises@gmail.com
                                     </p>
                                 </div>
                             </a>
