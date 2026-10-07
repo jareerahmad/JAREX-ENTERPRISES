@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+    font-family: "DM Sans", sans-serif;
+    color: #f3f5f3;
+    background: #050706;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: #050706;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: #050706;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #19c37d;
+    color: #03110a;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050706;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b2922;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #19c37d;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* ================================
+   CUSTOM CURSOR
+================================ */
+
+/* @media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        cursor: none;
+    }
+
+    .custom-cursor-dot {
+        position: fixed;
+        top: -4px;
+        left: -4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: #19c37d;
+        pointer-events: none;
+        z-index: 99999;
+        box-shadow: 0 0 14px rgba(25, 195, 125, 0.65);
+        will-change: transform;
+    }
+
+    .custom-cursor-circle {
+        position: fixed;
+        top: -18px;
+        left: -18px;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 9999px;
+        pointer-events: none;
+        z-index: 99998;
+        will-change: transform;
+        transition:
+            width 0.25s ease,
+            height 0.25s ease,
+            top 0.25s ease,
+            left 0.25s ease,
+            border-color 0.25s ease,
+            background-color 0.25s ease;
+    }
+
+    .custom-cursor-circle.cursor-hover {
+        top: -24px;
+        left: -24px;
+        width: 48px;
+        height: 48px;
+        border-color: #19c37d;
+        background: rgba(25, 195, 125, 0.06);
+    }
+
+    .custom-cursor-dot.cursor-dot-hover {
+        transform: scale(1.35);
+    }
+}
+
+/* Touch devices keep the normal cursor */
+/* @media (pointer: coarse) {
+
+    .custom-cursor-dot,
+    .custom-cursor-circle {
+        display: none;
+    }
+}  */
+
+
+
+
+/* =================================
+   JAREX CUSTOM CURSOR
+================================= */
+
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        cursor: none;
+    }
+
+    .custom-cursor-dot {
+        position: fixed;
+        top: -4px;
+        left: -4px;
+
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+
+        background: #19c37d;
+
+        pointer-events: none;
+        z-index: 99999;
+
+        box-shadow:
+            0 0 8px rgba(25, 195, 125, 0.8),
+            0 0 18px rgba(25, 195, 125, 0.35);
+
+        will-change: transform;
+
+        transition:
+            width 0.2s ease,
+            height 0.2s ease,
+            top 0.2s ease,
+            left 0.2s ease;
+    }
+
+    .custom-cursor-ring {
+        position: fixed;
+        top: -18px;
+        left: -18px;
+
+        width: 36px;
+        height: 36px;
+
+        border: 1px solid rgba(255, 255, 255, 0.85);
+
+        border-radius: 50%;
+
+        pointer-events: none;
+        z-index: 99998;
+
+        will-change: transform;
+
+        transition:
+            width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+            height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+            top 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+            left 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 0.25s ease,
+            background-color 0.25s ease;
+    }
+
+    /* Hovering links/buttons */
+    .custom-cursor-ring.cursor-active {
+        top: -23px;
+        left: -23px;
+
+        width: 46px;
+        height: 46px;
+
+        border-color: #19c37d;
+
+        background: rgba(25, 195, 125, 0.07);
+    }
+
+    .custom-cursor-dot.cursor-active-dot {
+        width: 10px;
+        height: 10px;
+
+        top: -5px;
+        left: -5px;
+
+        box-shadow:
+            0 0 10px rgba(25, 195, 125, 0.9),
+            0 0 22px rgba(25, 195, 125, 0.45);
+    }
+}
+
+/* Touch devices */
+@media (pointer: coarse) {
+
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none;
+    }
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    /* ================================
+     JAREX MOBILE REFINEMENT
+  ================================= */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        scroll-margin-top: 75px;
+    }
+
+    /* Better tap targets */
+    a,
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Prevent oversized text from causing horizontal overflow */
+    h1,
+    h2,
+    h3 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
+
+/* ================================
+   TOUCH DEVICES
+================================= */
+
+@media (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+}
+
+/* ================================
+   IMAGE RENDERING
+================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ================================
+   FOCUS STATES
+================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 1px solid #19c37d;
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   JAREX — Global Visual System
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(circle at 75% 5%,
+            rgba(25, 195, 125, 0.045),
+            transparent 28%),
+        #050706;
+}
+
+/* Smooth text rendering */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* Premium selection */
+::selection {
+    background: rgba(25, 195, 125, 0.9);
+    color: #03110a;
+}
+
+/* Subtle page texture */
+.jarex-texture {
+    position: relative;
+}
+
+.jarex-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom,
+            black,
+            transparent 80%);
+}
+
+/* Premium horizontal divider */
+.jarex-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent);
+}
+
+/* Green glow utility */
+.jarex-glow {
+    box-shadow:
+        0 0 30px rgba(25, 195, 125, 0.08),
+        0 0 80px rgba(25, 195, 125, 0.035);
+}
+
+/* Better image rendering */
+img {
+    image-rendering: auto;
+}
+
+/* Prevent accidental horizontal overflow */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
